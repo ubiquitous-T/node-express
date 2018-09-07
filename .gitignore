@@ -1,0 +1,8 @@
+# temporary swap files
+*.swp
+
+# ignore package file
+package.json
+
+# ignore node modules
+node_modules
