@@ -4,7 +4,7 @@ const dishRouter = express.Router();
 
 dishRouter.use(bodyParser.json());
 
-// All endpoints for /dishes
+// Routes for /dishes
 dishRouter.route('/')
 .all((req, res, next) => {
   res.statusCode = 200;
@@ -26,7 +26,7 @@ dishRouter.route('/')
   res.end('Deleting all dishes');
 });
 
-// Endpoints for /dishes/:dishId
+// Routes for /dishes/:dishId
 dishRouter.route('/:dishId')
 .all((req, res, next) => {
   res.statusCode = 200;
@@ -50,8 +50,5 @@ dishRouter.route('/:dishId')
 .delete((req, res, next) => {
   res.end('Deleting dish: ' + req.params.dishId);
 })
-
-
-
 
 module.exports = dishRouter;
